@@ -3,8 +3,8 @@ import React from "react";
 const ContactPage: React.FC = () => {
   return (
     <div style={styles.container}>
-      <h1 style={styles.header}>Contact Us</h1>
-      <form style={styles.form}>
+      <h1>Contact Us</h1>
+      <form>
         <div style={styles.formGroup}>
           <label style={styles.label} htmlFor="name">
             Name
