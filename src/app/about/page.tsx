@@ -1,6 +1,5 @@
 import { Metadata } from "next";
-import Image from "next/image";
-import myImage from "@/public/pexels-mikhail-nilov-6894103.jpg";
+
 
 export const metadata: Metadata = {
   title: "Explore our news",
