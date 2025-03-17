@@ -8,7 +8,7 @@ import { motion } from 'motion/react'
 const Contact = () => {
     const [result, setResult] = React.useState("");
 
-    const onSubmit = async (event: any) => {
+    const onSubmit = async (event) => {
       event.preventDefault();
       setResult("Sending....");
       const formData = new FormData(event.target);
