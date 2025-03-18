@@ -3,7 +3,12 @@ import Image from 'next/image'
 import React from 'react'
 import { motion } from 'motion/react'
 
-const Work = ({isDarkMode}) => {
+interface AboutProps {
+  isDarkMode: boolean;
+}
+
+const Work: React.FC<AboutProps> = ({ isDarkMode }) => {
+
   return (
     <motion.div initial={{opacity: 0 }} whileInView={{opacity: 1 }} transition={{duration: 1}} id='work' className='w-full px-[12%] py-10 scroll-mt-20'>
     <motion.h4 initial={{y: -20, opacity: 0 }} whileInView={{y: 0, opacity: 1 }} transition={{duration: 0.5, delay: 0.3}} className='text-center mb-2 text-lg font-Ovo'>My Portfolio</motion.h4>
@@ -20,17 +25,19 @@ I develop and manage scalable IT projects, including web platforms, mobile apps,
     <h2 className='font-semibold'>{project.title}</h2>
     <p className='text-sm text-gray-700'>{project.description}</p>
 </div>
-<div className='border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition'>
+<div className='border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-blue-500 transition'>
+    <a href={project.url} target='_blank'>
+
 <Image src={assets.send_icon} alt='' className='w-5' />
+    </a>
 </div>
         </div>
         </motion.div>
     ))}
 </motion.div>
 
-<motion.a initial={{opacity: 0 }} whileInView={{opacity: 1 }} transition={{duration: 0.5, delay: 1.1}} href="" className='w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover  '>
-
-    Show more <Image src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold} alt='right arrow' className='w-4 ' />
+<motion.a initial={{opacity: 0 }} whileInView={{opacity: 1 }} transition={{duration: 0.5, delay: 1.1}} href="https://wa.me/2348065423599?text=Hello,%20I%20am%20interested%20in%20your%20services!" className='w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover  '>
+  Chat With Me <Image src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold} alt='right arrow' className='w-4 ' />
 </motion.a>
     </motion.div>
   )

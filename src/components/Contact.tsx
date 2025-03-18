@@ -8,10 +8,10 @@ import { motion } from 'motion/react'
 const Contact = () => {
     const [result, setResult] = React.useState("");
 
-    const onSubmit = async (event) => {
+    const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
       setResult("Sending....");
-      const formData = new FormData(event.target);
+      const formData = new FormData(event.target as HTMLFormElement);
   
       formData.append("access_key", "57e853b0-bff9-4a2a-a7ca-e85be5a2e415");
   
@@ -24,7 +24,7 @@ const Contact = () => {
   
       if (data.success) {
         setResult("Form Submitted Successfully");
-        event.target.reset();
+        (event.target as HTMLFormElement).reset();
       } else {
         console.log("Error", data);
         setResult(data.message);

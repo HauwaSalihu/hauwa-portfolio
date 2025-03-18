@@ -18,7 +18,7 @@ I provide expert Full-Stack Development and IT Project Management services, spec
 <Image src={icon} alt='' className='w-10'/>
 <h3 className='text-lg my-4 text-gray-700 dark:text-white'>{title}</h3>
 <p className='text-sm text-gray-600 leading-5 dark:text-white/50'>{description}</p>
-        <a href={link}>Read more <Image src={assets.right_arrow} alt='' className='w-4'/></a>
+        <a href={link}>Contact Me<Image src={assets.right_arrow} alt='' className='w-4'/></a>
         </motion.div>
     ))
 }

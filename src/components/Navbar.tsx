@@ -6,12 +6,17 @@ import Image from "next/image";
 import { assets } from "@/assets/assets"
 import { useEffect, useRef, useState } from "react";
 
+interface NavbarProps {
+  isDarkMode: boolean;
+  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-function Navbar({isDarkMode, setIsDarkMode}) {
+const Navbar: React.FC<NavbarProps> = ({ isDarkMode, setIsDarkMode }) => {
+  // const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
   const [isScroll, setIsScroll] = useState(false)
 
-  const sideMenuRef = useRef<HTMLDivElement>(null);
+  const sideMenuRef = useRef<HTMLUListElement | null>(null);
 
   const openMenu = () => {
     if (sideMenuRef.current) {
@@ -63,7 +68,7 @@ function Navbar({isDarkMode, setIsDarkMode}) {
         </ul>
         <div className="flex items-center gap-4">
 
-<button onClick={()=> setIsDarkMode(prev => !prev)}>
+        <button onClick={() => setIsDarkMode((prev) => !prev)}>
   <Image src={isDarkMode ?  assets.sun_icon: assets.moon_icon } alt="" className="w-6"/>
 </button>
 

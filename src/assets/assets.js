@@ -84,32 +84,36 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
-        bgImage: '/work-1.png',
+        title: 'Frontend Project',
+        description: 'NordaTech site',
+        url:"https://nordatech.com.ng",
+        bgImage: '/pink-ban.png',
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
-        bgImage: '/work-2.png',
+        title: 'Full Stack e-commerce project',
+        description: 'Bata Nigeria site',
+        url:"https://batanigeria.com",
+        bgImage: '/bata-shot.png',
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
+        title: 'Process Automation Project',
+        description: 'eFCAS site',
+        url:"https://efcas.ng",
+        bgImage: '/fcas-shot.png',
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: '/work-4.png',
+        title: 'Fund Raising NGO Project',
+        description: 'Esi Foundation site',
+        url:"https://esi.com.ng",
+        bgImage: '/esi-shot.png',
     },
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web development', description: 'Building modern, responsive, and scalable web solutions.', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Creating intuitive, high-performance, and scalable mobile applications.', link: '' },
-    { icon: assets.it_project, title: 'IT Project Management', description: 'Efficient planning, execution, and delivery of IT projects.', link: '' },
-    { icon: assets.it_consult, title: 'IT Consulting', description: 'Expert guidance on technology choices/strategies and solutions. ', link: '' },
+    { icon: assets.web_icon, title: 'Web development', description: 'Building modern, responsive, and scalable web solutions.', link: '#contact' },
+    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Creating intuitive, high-performance, and scalable mobile applications.', link: '#contact' },
+    { icon: assets.it_project, title: 'IT Project Management', description: 'Efficient planning, execution, and delivery of IT projects.', link: '#contact' },
+    { icon: assets.it_consult, title: 'IT Consulting', description: 'Expert guidance on technology choices/strategies and solutions. ', link: '#contact' },
 ]
 
 export const infoList = [

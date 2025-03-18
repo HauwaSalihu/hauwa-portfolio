@@ -1,8 +1,11 @@
 import Image from "next/image";
 import { assets } from "@/assets/assets";
 
+interface AboutProps {
+  isDarkMode: boolean;
+}
 
-function Footer({isDarkMode}) {
+const Footer: React.FC<AboutProps> = ({ isDarkMode }) => {
   return (
     <footer className="mt-20">
      <div className="text-center">
