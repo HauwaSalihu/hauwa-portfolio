@@ -1,25 +1,47 @@
-import Image from "next/image";
-import myImage from "../../public/pexels-mikhail-nilov-6894103.jpg";
+"use client"
+
+import Header from "@/components/Header";
+import About from "@/components/About";
+import Services from "@/components/Services";
+import Work from "@/components/Work";
+import Contact from "@/components/Contact";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { useEffect, useState } from "react";
+// setting darkmode code for entire site. also set in tailwind custom code
 export default function Home() {
+
+  const [isDarkMode, setIsDarkMode] = useState(false)
+
+  useEffect(()=> {
+      if (localStorage.them === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        setIsDarkMode(true)
+        
+      } else{
+          setIsDarkMode(false)
+      }
+  }, [])
+
+  useEffect(()=> {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark')
+      localStorage.theme = 'dark'
+    } else{
+      document.documentElement.classList.remove('dark')
+      localStorage.theme = ''
+    }
+  },[isDarkMode])
+
   return (
-    <section className="relative flex justify-center items-center h-screen">
-      <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
-      <Image
-        src={myImage}
-        className="object-cover w-full h-full"
-        alt="my image"
-      />
-      <div className="absolute text-center z-20 space-y-6">
-        <h1 className="text-5xl text-white font-bold w-[15rem] tracking-widest">
-          HI, I AM HAUWA SALIHU
-        </h1>
-        <p className="text-white uppercase tracking-widest font-medium">
-          A Software Engineer
-        </p>
-        <button className="bg-black text-white p-4 rounded">
-          Download Resume
-        </button>
-      </div>
-    </section>
+ <>
+ <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+ <Header />
+ <About isDarkMode={isDarkMode}  />
+ <Services />
+ <Work isDarkMode={isDarkMode}  />
+ <Contact />
+
+        <Footer isDarkMode={isDarkMode} />
+ </>
   );
 }
