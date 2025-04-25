@@ -96,7 +96,7 @@ export const workData = [
         bgImage: '/bata-shot.png',
     },
     {
-        title: 'Process Automation Project',
+        title: 'Process Automation IT Project Management',
         description: 'eFCAS site',
         url:"https://efcas.ng",
         bgImage: '/fcas-shot.png',
