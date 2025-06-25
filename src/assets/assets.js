@@ -35,7 +35,7 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
-import profile_imnage from "./IMG_2221.png"
+import profile_image from "./SALIHU SPP SOFT.jpg"
 import it_project from "./consult.jpg"
 import it_consult from './it-man-icon.jpg'
 
@@ -44,7 +44,7 @@ export const assets = {
     code_icon,
     it_project,
     it_consult,
-    profile_imnage,
+    profile_image,
     code_icon_dark,
     edu_icon,
     edu_icon_dark,
@@ -92,7 +92,7 @@ export const workData = [
     {
         title: 'Full Stack e-commerce project',
         description: 'Bata Nigeria site',
-        url:"https://batanigeria.com",
+        url:"https://bata-frontend.vercel.app",
         bgImage: '/bata-shot.png',
     },
     {
