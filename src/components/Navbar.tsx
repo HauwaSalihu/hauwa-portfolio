@@ -45,8 +45,10 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, setIsDarkMode }) => {
 
     <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/20" : ""}`}>
       <a href="#top">
+        <Image src={isDarkMode ?  assets.logo_dark: assets.logo } alt="Site Logo" width={200} height={200} />
         
-        <h3 className="text-black text-3xl font-bold mr-14 dark:text-white">HPortfolio</h3>
+        
+        {/* <h3 className="text-black text-3xl font-bold mr-14 dark:text-white">HPortfolio</h3> */}
       </a>
       
         <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent"} `} >
